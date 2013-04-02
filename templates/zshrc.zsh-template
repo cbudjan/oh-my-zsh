@@ -5,12 +5,34 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="cbudjan"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="sublime ~/.zshrc"
+alias ohmyzsh="sublime ~/.oh-my-zsh"
 
+# Custom aliases
+alias docs='cd ~/Documents'
+alias dls='cd ~/Downloads'
+alias phd='cd ~/Dropbox/Projects/PhD\ project'
+alias programming='cd ~/Dropbox/Projects/Programming'
+alias projects='cd ~/Dropbox/Projects'
+alias scripts='cd ~/Scripts'
+alias subl='sublime -n .'
+
+# alias ..='cd ../'
+# alias ..2='cd ../../'
+# alias ..3='cd ../../../'
+# alias ..4='cd ../../../../'
+
+alias ls='ls -aF'
+# alias l='ls -la'
+# alias ll='ls -l'
+alias rm='rm -i'
+
+alias amaserv='ssh -l cb631 amaserv.gen.cam.ac.uk'
+
+alias f='open -a Finder ./'
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -32,8 +54,17 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git git-flow textmate brew gem github osx)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/cbudjan/.rvm/bin:/Users/cbudjan/Scripts
+
+# Setting PATH for EPD-7.3-2
+# The orginal version is saved in .bash_profile.pysave
+#PATH="/Library/Frameworks/Python.#framework/Versions/Current/bin:${PATH}"
+#export PATH
+
+# load RVM
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
